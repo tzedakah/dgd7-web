@@ -1,0 +1,21 @@
+<?php
+/**
+* Implements hook_views_api().
+*/
+function articles_by_author_views_api() {
+return array(
+'api' => '3.0',
+);
+}
+/**
+* Implements hook_views_default_views().
+*/
+function articles_by_author_views_default_views() {
+$path = './' . drupal_get_path('module', 'articles_by_author') . '/views/*.inc';
+$views = array();
+foreach (glob($path) as $views_filename) {
+require_once($views_filename);
+}
+return $views;
+}
+?>

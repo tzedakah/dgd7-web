@@ -1,0 +1,7 @@
+name = "Articles by Author Customization"
+description = “Customize the comment form for MyProject.”
+core = 7.x
+package = "dgd7"
+
+; Add any modules that we rely on.
+dependencies[] = comment
